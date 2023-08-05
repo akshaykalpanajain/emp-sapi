@@ -38,8 +38,8 @@
 								<properties>
 									<env>dev</env>
 									<api.id>18876760</api.id>
-									<anypoint.platform.client_id>030f0f52ff1e4d9597ba10453e474169</anypoint.platform.client_id>
-									<anypoint.platform.client_secret>5acCD069b13048cC8e25039c78524d63</anypoint.platform.client_secret>
+									<anypoint.platform.client_id>${anypoint.platform.client_id}</anypoint.platform.client_id>
+									<anypoint.platform.client_secret>${anypoint.platform.client_secret}</anypoint.platform.client_secret>
 								</properties>
 							</cloudHubDeployment>
 						</configuration>
@@ -66,8 +66,8 @@
 								<properties>
 									<env>test</env>
 									<api.id>18876761</api.id>
-									<anypoint.platform.client_id>bd106825085a4583aa5fdf51fb2e0ecb</anypoint.platform.client_id>
-									<anypoint.platform.client_secret>a3a12d75384941A7aCeAd20feC673a5D</anypoint.platform.client_secret>
+									<anypoint.platform.client_id>${anypoint.platform.client_id}</anypoint.platform.client_id>
+									<anypoint.platform.client_secret>${anypoint.platform.client_secret}</anypoint.platform.client_secret>
 								</properties>
 							</cloudHubDeployment>
 						</configuration>
@@ -93,8 +93,8 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.4.0</muleVersion>
-						<username>akshayvankudre18</username>
-						<password>Akki123@123</password>
+						<username>${username}</username>
+						<password>${password}</password>
 						<objectStoreV2>true</objectStoreV2>
 						<properties>
 							<http.port>8081</http.port>

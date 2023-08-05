@@ -128,7 +128,7 @@ output application/xml
 {
   response: {
     status: "200",
-    message: "Success Response"
+    message: "Success"
   }
 }]]></ee:set-payload>
             </ee:message>
@@ -142,7 +142,7 @@ output application/json
 ---
 {
   status: 200,
-  message: "Success Resonse"
+  message: "Success"
 }]]></ee:set-payload>
             </ee:message>
         </ee:transform>
@@ -171,7 +171,7 @@ output application/json
 ---
 {
   status: 201,
-  message: "Created Successfully"
+  message: "Created"
 }]]></ee:set-payload>
             </ee:message>
         </ee:transform>
