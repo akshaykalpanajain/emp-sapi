@@ -1,0 +1,84 @@
+#%RAML 1.0 Library
+usage: emp sapi datatypes
+types:
+  emp-sapi-create-employee-request:
+    type: object
+    properties:
+          employeeId:
+            type: number
+            required: true
+            example: 101
+          employeeName:
+            type: string
+            required: true
+            example: "Akshay"
+          employeeStatus:
+            type: string
+            required: true
+            example: "A" 
+  emp-sapi-create-employee-response:
+    type: object
+    properties:
+              status:
+                type: number
+                required: true
+                example: 201
+              message:
+                type: string
+                required: true
+                example: "Created"
+  emp-sapi-update-employee-request:
+    type: object
+    xml:
+          name: employee
+    properties:
+          employeeId:
+            type: number
+            required: true
+            example: 101
+          employeeStatus:
+            type: string
+            required: true
+            example: "I"
+  emp-sapi-update-employee-response:
+    type: object
+    xml:
+              name: response
+    properties:
+              status:
+                type: number
+                required: true
+                example: 200
+              message:
+                type: string
+                required: true
+                example: "Success"
+  emp-sapi-get-employee-response:
+    type: array
+    items:
+              type: object
+              properties:
+                employeeId:
+                  type: number
+                  required: true
+                  example: 101
+                employeeName:
+                  type: string
+                  required: true
+                  example: "Akshay"
+                employeeStatus:
+                  type: string
+                  required: true
+                  example: "A"
+  emp-sapi-delete-employee-response:
+    type: object
+    properties:
+              status:
+                type: number
+                required: true
+                example: 200
+              message:
+                type: string
+                required: true
+                example: "Success"
+  

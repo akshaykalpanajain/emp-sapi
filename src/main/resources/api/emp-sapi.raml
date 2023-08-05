@@ -1,0 +1,52 @@
+#%RAML 1.0
+title: emp-sapi
+baseUri: http://localhost:8081/emp-sapi
+traits:
+  get-employee-query-param: !include /traits/emp-sapi-get-employee-query-params.raml
+uses:
+  emp-sapi-datatypes: /emp-sapi-datatypes-library/emp-sapi-data-types-library.raml
+/create-employee:
+  post:
+    body:
+      application/json:
+        type: emp-sapi-datatypes.emp-sapi-create-employee-request
+        example: !include /examples/create-employee-request-payload.json  
+    responses:
+      201:
+        body:
+          application/json:
+            type: emp-sapi-datatypes.emp-sapi-create-employee-response
+            example: !include examples/create-employee-response-payload.json
+/update-employee:
+  put:
+    body:
+      application/xml:
+        type: emp-sapi-datatypes.emp-sapi-update-employee-request
+        example: !include examples/update-employee-request-payload.xml
+          
+    responses:
+      200:
+        body:
+          application/xml:
+            type: emp-sapi-datatypes.emp-sapi-update-employee-response
+            example: !include examples/update-employee-response-payload.xml
+               
+/get-employee:
+  get:
+    is: [get-employee-query-param]
+    responses:
+      200:
+        body:
+          application/json:
+            type: emp-sapi-datatypes.emp-sapi-get-employee-response
+            example: !include examples/get-employee-response-payload.json
+                
+/delete-employee:
+  delete:
+    responses:
+      200:
+        body:
+          application/json:
+            type: emp-sapi-datatypes.emp-sapi-delete-employee-response
+            example: !include examples/delete-employee-response-payload.json
+              
